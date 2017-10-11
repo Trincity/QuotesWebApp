@@ -1,3 +1,42 @@
-<p>
-  quote works!
-</p>
+<div class="row" *ngIf="quoteOfDay.length > 0">
+  <h2>Quote Of The Day</h2>
+  <dl class="row quoteOfDay">
+    <dt class="col-md-10">
+      {{quoteOfDay[0]?.quote}}
+    </dt>
+    <dd class="col-md-2">
+      {{quoteOfDay[0]?.speaker}}
+    </dd>
+  </dl>
+</div>
+
+<br>
+<div class="row" *ngIf="!addTag">
+  <a class="btn btn-default" href="/add" style="float: right; padding: 5px">Add Quote</a>
+</div>
+<br>
+
+<br>
+<div class="row quotes" *ngFor="let quote of quotes">
+  <dl class="row">
+    <dt class="col-md-2 dl-label">
+      Quote
+    </dt>
+    <dd class="col-md-10">
+        <dl class="row">
+          <dt class="col-md-10">"{{ quote.quote }}"</dt>
+          <dd class="col-md-2"><a href="/edit/{{quote.id}}"><span class="glyphicon glyphicon-pencil"></span></a></dd>
+        </dl>
+    </dd>
+    <dt class="col-md-2 dl-label">
+      Speaker
+    </dt>
+    <dd class="col-md-10">
+        <dl class="row">
+          <dt class="col-md-10 speaker">{{quote.speaker}}</dt>
+          <dd class="col-md-2"><a (click)="deleteQuote(quote.id)"><span class="glyphicon glyphicon-remove"></span></a></dd>
+        </dl>
+    </dd>
+  </dl>
+  <hr>
+</div>

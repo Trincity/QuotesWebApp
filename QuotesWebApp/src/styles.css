@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+h1 {
+    text-align: center;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    text-shadow: 3px 2px navy;
+    color: #38BBF8;
+    font-size: 500%;
+    font-weight: 900;
+}
+
+.textbox {
+    width: 500px;
+}
+
+.dl-label {
+    color: navy;
+}

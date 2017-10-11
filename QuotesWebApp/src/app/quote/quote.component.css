@@ -1,0 +1,18 @@
+h2 {
+    font-weight: 800;
+    color: #570808;
+}
+
+.quotes {
+    font-size: 125%;
+}
+
+.speaker {
+    color: #743074;
+}
+
+.quoteOfDay {
+    color: #413374;
+    font-size: 130%;
+    font-weight: bold;
+}
